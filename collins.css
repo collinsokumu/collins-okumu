@@ -1,0 +1,243 @@
+
+  body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    color:white;
+    height: auto;
+
+  }
+  
+  header {
+    background-color:#24466a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('tech.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+  
+  header h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 3.5em;
+    margin: 0;
+    color: red;
+  }
+  h2{
+    color:#f1f1f1;
+    font-size: 2em;
+}
+h3{
+color: red;
+font-size: 2em;
+    }
+    p{
+        font-size: 1.5em;
+    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav li.active{
+      color:red;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(240, 235, 235);
+  }
+nav a:hover{
+  color: #f30f0f;
+}
+  main {
+    padding: 40px;
+    background-color:#24466a;
+    display: flex;
+    background-image: url('tech.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+  .content-flex {
+    display: flex;
+  }
+  
+  .image-container {
+    flex: 0 0 50%;  /* Sets the width of the image container to 30% */
+    text-align: flex;
+  }
+  
+  .image-container img {
+    width: 150%;  /* Ensures the image fills the container width */
+    height: 500px;;
+    object-fit:contain;
+    object-position: 15% 100%;
+  }
+  .image-c img{
+  }
+  .image-a img{
+    width: auto;  /* Ensures the image fills the container width */
+    height: auto;
+    object-fit:contain;
+    object-position: 15% 100%;
+  }
+  .image-c {
+    flex: 0 0 50%;  /* Sets the width of the image container to 30% */
+    text-align: flex;
+}
+  .intro {
+    flex: 1;  /* Makes the intro section fill the remaining space */
+    padding: 20px;
+  }
+  
+  .intro h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .buttons a {
+    background-color: #f30f0f;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .buttons a:hover {
+    background-color: #7a4848;
+  }
+  #About{
+    padding: 40px;
+    background-color:#24466a;
+    display: flex;
+    justify-content:flex-end;
+    background-image: url('tech2.jpeg');
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  background-size: 100% 100%;
+  contain:layout;
+  }
+  #About h2{
+    color: #f30f0f;
+  }
+  #services {
+    padding: 50px 0;
+    color:#222;
+    background-color: #e6ecf1;
+
+  }
+  
+  #services h2 {
+    text-align:center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f30f0f;
+  }
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .service {
+    width: calc(33% - 40px); /* Adjust width based on desired columns */
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    text-align:justify;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .service:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    box-shadow: 0px 2px 5px #6495ED(0, 0, 0, 0.2); /* Add a subtle shadow */
+    /* Optional: Add a border on hover */
+    border: 1px solid #ddd;
+  }
+  
+  .service img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .service h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .service p {
+    line-height: 1.5; /* Adjust line spacing for better readability */
+  }
+  .services {
+    display: flex; /* Arrange services horizontally */
+    flex-wrap: wrap; /* Allow services to wrap on smaller screens */
+    justify-content: space-around; /* Distribute services evenly */
+    gap: 20px; /* Add spacing between services */
+  }
+  
+  .service {
+    width: calc(33% - 40px); /* Adjust width based on desired columns */
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Needed for checkmark positioning */
+  }
+  
+  .service.completed .check {
+    opacity: 1; /* Animate opacity to 1 when completed */
+    animation: checkMarkAppear 0.5s ease-in-out forwards;
+  }
+  
+  .check {
+    font-size: 3em; /* Adjust size as needed */
+    color: green;
+    position: absolute; /* Position checkmark within service */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center checkmark */
+    opacity: 0; /* Initially hidden */
+  }
+  
+  @keyframes checkMarkAppear {
+    from { opacity: 0; transform: scale(0); } /* Start small and hidden */
+    to { opacity: 1; transform: scale(1); } /* Animate to full size and opacity */
+  }
+  header {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+@keyframes zoomInOut {
+    20% { transform: scale(1); }
+    70% { transform: scale(1.2); }
+    140% { transform: scale(1); }
+}
